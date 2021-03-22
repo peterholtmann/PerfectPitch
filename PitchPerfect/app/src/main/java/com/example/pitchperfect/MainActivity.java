@@ -1,4 +1,4 @@
-package com.example.pitchperfect;
+package com.example.perfectpitchapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,4 +11,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
+
+    DatabaseHelper databaseHelper = new DatabaseHelper(MainActivity.this);
+
+    bool success = DatabaseHelper.addOne();
+
 }
