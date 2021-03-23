@@ -1,7 +1,6 @@
-package com.example.perfectpitchapp;
+package com.example.pitchperfect;
 
 import androidx.appcompat.app.AppCompatActivity;
-import java.util.*;
 import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
@@ -14,6 +13,6 @@ public class MainActivity extends AppCompatActivity {
 
     DatabaseHelper databaseHelper = new DatabaseHelper(MainActivity.this);
 
-    boolean success = DatabaseHelper.addOne();
+//    boolean success = DatabaseHelper.addOne();
 
 }

@@ -1,8 +1,9 @@
-package com.example.perfectpitchapp;
+package com.example.pitchperfect;
 
 import java.*;
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import java.util.*;
@@ -59,7 +60,7 @@ public class DatabaseHelper extends SQLiteOpenHelper
     public boolean deleteOne(PlayerModel playerModel)
     {
         String queryString = "DELETE FROM " + PLAYER_DATA + "WHERE " + COLUMN_PLAYER_ID + " = " + playerModel.getPlayer_id();
-        SQLiteDatabase db = this.getWritableableDatabase();
+        SQLiteDatabase db = this.getWritableDatabase();
 
         Cursor results = db.rawQuery(queryString, null);
 
@@ -70,6 +71,7 @@ public class DatabaseHelper extends SQLiteOpenHelper
         else
             return false;
     }
+
 
     public List<PlayerModel> getEveryone()
     {

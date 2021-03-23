@@ -1,4 +1,4 @@
-package com.example.perfectpitchapp;
+package com.example.pitchperfect;
 
 public class PlayerModel
 {
