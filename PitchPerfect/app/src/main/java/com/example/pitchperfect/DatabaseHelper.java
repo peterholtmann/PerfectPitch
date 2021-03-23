@@ -1,9 +1,11 @@
 package com.example.perfectpitchapp;
 
+import java.*;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import java.util.*;
 
 import androidx.annotation.Nullable;
 
@@ -26,7 +28,7 @@ public class DatabaseHelper extends SQLiteOpenHelper
     @Override
     public void onCreate(SQLiteDatabase db)
     {
-        string createTableStatement = "CREATE TABLE " + PLAYER_DATA + " (" + COLUMN_PLAYER_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMN_PLAYER_NAME + " TEXT, " + COLUMN_BALL_SPEED + " FLOAT, " + COLUMN_BALL_TIMETOPLATE + " FLOAT, " + COLUMN_BALL_RPM + " FLOAT)";
+        String createTableStatement = "CREATE TABLE " + PLAYER_DATA + " (" + COLUMN_PLAYER_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMN_PLAYER_NAME + " TEXT, " + COLUMN_BALL_SPEED + " FLOAT, " + COLUMN_BALL_TIMETOPLATE + " FLOAT, " + COLUMN_BALL_RPM + " FLOAT)";
         db.execSQL(createTableStatement);
     }
 
@@ -43,7 +45,7 @@ public class DatabaseHelper extends SQLiteOpenHelper
         ContentValues cv = new ContentValues();
 
         cv.put(COLUMN_PLAYER_NAME, playerModel.getName());
-        cv.put(COLUMN_BALL_SPEED, playerModel.getSpeed();
+        cv.put(COLUMN_BALL_SPEED, playerModel.getSpeed());
         cv.put(COLUMN_BALL_TIMETOPLATE, playerModel.getTime_to_plate());
         cv.put(COLUMN_BALL_RPM, playerModel.getRpm());
 
@@ -71,10 +73,9 @@ public class DatabaseHelper extends SQLiteOpenHelper
 
     public List<PlayerModel> getEveryone()
     {
-        List<CustomerModel> returnList = new ArrayList<>();
+        List<PlayerModel> returnList = new ArrayList<>();
 
         String queryString = "SELECT * FROM " + PLAYER_DATA;
-
         SQLiteDatabase db = this.getReadableDatabase();
 
         Cursor results = db.rawQuery(queryString, null);
@@ -85,7 +86,7 @@ public class DatabaseHelper extends SQLiteOpenHelper
             // put them in return list (from a few lines up)
             do{
                 int playerID = results.getInt(0);
-                string playerName = results.getString(1);
+                String playerName = results.getString(1);
                 float ballSpeed = results.getFloat(2);
                 float timeToPlate = results.getFloat(3);
                 float ballRPM = results.getFloat(4);
