@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -25,17 +26,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void openMainPage(){
-        Intent main_intent =null; new Intent(this,MainActivity.class);
-        startactivity{main_intent);
+        Intent main_intent = new Intent(this,MainActivity.class);
+        startActivity(main_intent);
     }
 
     public void openPlayActivity(){
-        Intent intent= null;  new Intent(this, PlayActivity.class);
+        Intent intent= new Intent(this, SecondActivity.class);
         startActivity(intent);
     }
 
     public void openSettingsActivity(){
-        Intent intent2 = null; new Intent(this, Settings.class);
+        Intent intent2 = new Intent(this, ThirdActivity.class);
         startActivity(intent2);
     }
 }
