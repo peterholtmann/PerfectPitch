@@ -1,3 +1,10 @@
 <resources>
-    <string name="app_name">PitchPerfect</string>
+    <string name="app_name">Pitch Perfect</string>
+    <string name="todo">TODO</string>
+    <string name="don_t_have_the_pitch_perfect_baseball">Don\'t have the Pitch Perfect Baseball?</string>
+    <string name="perfect_pitch">Perfect Pitch</string>
+    <string name="play_ball">Play Ball!</string>
+    <string name="settings">Settings</string>
+    <string name="Buy">BUY</string>
+    <string name="statistics">Statistics</string>
 </resources>
