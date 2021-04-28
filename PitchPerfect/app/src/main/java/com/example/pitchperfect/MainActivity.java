@@ -4,20 +4,31 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 
+import android.util.Log;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
-
+    private String TAG = "PitchPerfect";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        Log.d(TAG, "Entered onCreate()");
 
+        try {
+            Log.d(TAG, "calling onCreate()");
+            super.onCreate(savedInstanceState);
 
+            Log.d(TAG, "setting content view");
+            setContentView(R.layout.activity_main);
+        } catch (Exception e) {
+            Log.e(TAG, "onCreate", e);
+            throw e;
+        }
+
+        Log.d(TAG, "Exited onCreate()");
     }
 
     public void openFakeWebsite(){
