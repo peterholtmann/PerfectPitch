@@ -1,14 +1,12 @@
 package com.example.pitchperfect;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
-
-import android.util.Log;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
-import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
     private String TAG = "PitchPerfect";
@@ -31,23 +29,15 @@ public class MainActivity extends AppCompatActivity {
         Log.d(TAG, "Exited onCreate()");
     }
 
-    public void openFakeWebsite(){
-        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.google.com"));
-        startActivity(browserIntent);
+    public void openFakeWebsite(View view){
+        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://letmegooglethat.com/?q=Pitch+Perfect+Baseball")));
     }
 
-    public void openMainPage(){
-        Intent main_intent = new Intent(this,MainActivity.class);
-        startActivity(main_intent);
+    public void openPlayActivity(View view){
+        startActivity(new Intent(MainActivity.this, SecondActivity.class));
     }
 
-    public void openPlayActivity(){
-        Intent intent= new Intent(this, SecondActivity.class);
-        startActivity(intent);
-    }
-
-    public void openSettingsActivity(){
-        Intent intent2 = new Intent(this, ThirdActivity.class);
-        startActivity(intent2);
+    public void openSettingsActivity(View view){
+        startActivity(new Intent(MainActivity.this, ThirdActivity.class));
     }
 }

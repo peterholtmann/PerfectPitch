@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+
     <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/Purple_BG"
         android:orientation="vertical"
         android:paddingTop="10dp"
-        android:paddingBottom="10dp">
+        android:paddingBottom="10dp"
+        tools:context=".MainActivity">
 
         <TextView
             android:layout_width="wrap_content"
@@ -68,86 +72,24 @@
             android:typeface="serif"
             app:backgroundTint="#E0562C"
             android:onClick="openSettingsActivity"/>
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:src="@drawable/whitebackground"
-            android:scaleX="10000"
-            android:scaleY="1000"
-            android:translationY="460dp"
-            android:contentDescription="@string/todo"
-            />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:contentDescription="TODO"
-            android:scaleX="100"
-            android:scaleY="240"
-            android:src="@drawable/whitebackground"
-            android:translationX="197dp"
-            android:translationY="302dp" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:scaleType="fitCenter"
-            android:scaleX="1"
-            android:scaleY="1"
-            android:src="@drawable/intersection_1"
-            android:translationY="200dp"
-            android:contentDescription="TODO" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:scaleType="fitCenter"
-            android:scaleX="1"
-            android:scaleY="1"
-            android:src="@drawable/intersection_2"
-            android:translationY="-90dp"
-            android:contentDescription="TODO" />
-
-
-        <Button
-            android:layout_width="80dp"
-            android:layout_height="50dp"
-            android:layout_gravity="center_horizontal"
-            android:background="@drawable/roundshapebtn"
-            android:fontFamily="sans-serif-medium"
-            android:text="@string/Buy"
-            android:textAllCaps="false"
-            android:textColor="#FF00"
-            android:textSize="20sp"
-            android:translationX="120dp"
-            android:translationY="60dp"
-            android:typeface="serif"
-            app:backgroundTint="@color/white"
-            app:iconPadding="0dp"
-            app:strokeColor="#FFFFFF"
-            android:onClick="openFakeWebsite"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:fontFamily="sans-serif-medium"
-            android:text="@string/don_t_have_the_pitch_perfect_baseball"
-            android:textAlignment="center"
-            android:textAllCaps="false"
-            android:textColor="#000000"
-            android:textSize="15sp"
-            android:textStyle="bold"
-            android:translationX="-53dp"
-            android:translationY="30dp"
-            android:typeface="serif" />
+    <Button
+        android:id="@+id/buy"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="105dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/roundshapebtn"
+        android:fontFamily="sans-serif-medium"
+        android:text="Buy Ball"
+        android:textColor="#FFFF"
+        android:textSize="15sp"
+        android:textAllCaps="false"
+        android:translationY="360dp"
+        android:typeface="serif"
+        app:backgroundTint="#E0562C"
+        android:onClick="openFakeWebsite"/>
 
 
 
+</LinearLayout>
 
-    </LinearLayout>
